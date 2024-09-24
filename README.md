@@ -38,6 +38,6 @@ function compareStrings(string memory string1, string memory string2) public pur
 2. Los usuarios deben aprobar previamente al contrato para gastar tokens en su nombre.
 
 ## 💻 Creadores
-@kevinlatino("https://github.com/kevinlatino")
-@villarley("https://github.com/villarley")
+[@kevinlatino]("https://github.com/kevinlatino")
+[@villarley]("https://github.com/villarley")
 
