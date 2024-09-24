@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.26;
 
 // Import OpenZeppelin's IERC20 and Ownable
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
@@ -21,11 +21,10 @@ contract TokenStaking is Ownable {
     event Withdrawn(address indexed user, uint256 amount);
     event RewardPaid(address indexed user, uint256 reward);
 
-    // Constructor to initialize the staking token
-    constructor(IERC20 _stakingToken) Ownable() {
+    // Constructor to initialize the staking token and owner
+    constructor(IERC20 _stakingToken) Ownable(msg.sender) {
         stakingToken = _stakingToken; // Set the staking token
     }
-
 
     // Stake function: Allows users to stake a specific amount of tokens
     function stake(uint256 _amount) external {
